@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinidu PC Solution | Computer Parts, Custom PCs &amp; Repairs – Kaduwela – Concept Demo</title>
+  <meta name="description" content="Dinidu PC Solution (DPS), 30/1/1 Avissawella Road, Kaduwela. Computer parts, custom PC builds, upgrades and repairs. Get today's price on WhatsApp.">
+  <!-- Demo only: stops Google from listing this page. REMOVE when the real site goes live. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --orange: #ff6a13;
+      --orange-dark: #e25300;
+      --black: #111215;
+      --steel: #2a2d33;
+      --silver: #eef0f3;
+      --white: #ffffff;
+      --ink: #15171c;
+      --muted: #6b717d;
+      --line: #dfe2e8;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    @supports (overflow: clip) { html, body { overflow-x: clip; } }
+    body { font-family: 'Inter', sans-serif; background: var(--silver); color: var(--ink); overflow-x: hidden; padding-bottom: 70px; }
+    h1, h2, h3, h4, h5 { font-family: 'Rajdhani', 'Arial Narrow', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--ink); }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    section { padding: 90px 0; }
+    .muted { color: var(--muted); }
+    .orange { color: var(--orange) !important; }
+    .label { font-family: 'JetBrains Mono', monospace; font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); }
+    .title { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1; }
+    @media (max-width: 575px) { .row.g-5 { --bs-gutter-x: 1.5rem; --gx: 1.5rem; margin-left: -.75rem; margin-right: -.75rem; } .row.g-5 > * { padding-left: .75rem; padding-right: .75rem; } }
+
+    .demo-line { background: var(--orange); color: #fff; text-align: center; font-size: .8rem; padding: 6px; font-weight: 600; }
+
+    /* Nav */
+    .navbar { background: var(--black); }
+    .navbar-brand { display: flex; align-items: center; gap: 10px; color: #fff !important; font-family: 'Rajdhani'; font-weight: 700; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 1px; }
+    .navbar-brand img { width: 42px; height: 42px; border-radius: 10px; }
+    @media (max-width: 575px) { .navbar-brand { font-size: 1rem; gap: 8px; } .navbar-brand img { width: 36px; height: 36px; } .hero-logo { max-width: 220px; } }
+    .navbar .nav-link { color: #b9bec8 !important; font-weight: 600; font-size: .9rem; }
+    .navbar .nav-link:hover { color: #fff !important; }
+    .navbar-toggler { border-color: #444; }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    .btn-orange { background: var(--orange); color: #fff; border: 0; border-radius: 10px; padding: 12px 24px; font-weight: 700; }
+    .btn-orange:hover { background: var(--orange-dark); color: #fff; }
+    .btn-steel { background: var(--steel); color: #fff; border: 0; border-radius: 10px; padding: 12px 24px; font-weight: 700; }
+    .btn-steel:hover { background: #000; color: #fff; }
+    .btn-out { background: transparent; color: #fff; border: 1.5px solid #555; border-radius: 10px; padding: 11px 22px; font-weight: 700; }
+    .btn-out:hover { border-color: #fff; color: #fff; }
+
+    /* Hero: circuit board */
+    .hero { background: var(--black); color: #fff; padding: 70px 0 80px; position: relative; overflow: hidden; }
+    .hero svg.circuit { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .22; }
+    .hero .container { position: relative; }
+    .hero h1 { color: #fff; font-size: clamp(2.8rem, 7.5vw, 5.4rem); line-height: .95; }
+    .hero h1 span { color: var(--orange); }
+    .hero-logo { width: 100%; max-width: 340px; border-radius: 40px; box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 80px rgba(255,106,19,.25); }
+    .search-hero { display: flex; background: #fff; border-radius: 14px; overflow: hidden; max-width: 520px; margin-top: 28px; }
+    .search-hero input { flex: 1; border: 0; padding: 15px 18px; font-size: 1rem; outline: none; min-width: 0; }
+    .search-hero button { border: 0; background: var(--orange); color: #fff; padding: 0 22px; font-weight: 700; }
+    .chips-hero { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chips-hero a { color: #b9bec8; border: 1px solid #3a3d44; border-radius: 30px; padding: 5px 12px; font-size: .8rem; text-decoration: none; }
+    .chips-hero a:hover { color: #fff; border-color: var(--orange); }
+    .notice { display: inline-flex; gap: 10px; align-items: center; background: rgba(255,106,19,.12); border: 1px solid rgba(255,106,19,.4); color: #ffb98f; border-radius: 30px; padding: 6px 14px; font-size: .82rem; }
+
+    /* Services strip */
+    .svc-strip { background: var(--white); border-bottom: 1px solid var(--line); padding: 26px 0; }
+    .svc-strip .s { display: flex; gap: 12px; align-items: center; font-weight: 600; font-size: .92rem; }
+    .svc-strip .s i { width: 44px; height: 44px; border-radius: 12px; background: #fff1e8; color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+
+    /* Catalogue */
+    .cat-bar { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cat { border: 1.5px solid var(--line); background: #fff; color: var(--ink); border-radius: 10px; padding: 8px 14px; font-weight: 600; font-size: .86rem; display: inline-flex; gap: 7px; align-items: center; }
+    .cat.on, .cat:hover { background: var(--black); color: #fff; border-color: var(--black); }
+    .cat .n { font-family: 'JetBrains Mono'; font-size: .72rem; opacity: .6; }
+    .cat-search { border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 14px; width: 100%; }
+    .cat-search:focus { outline: none; border-color: var(--orange); }
+    .part { background: #fff; border: 1px solid var(--line); border-radius: 16px; height: 100%; display: flex; flex-direction: column; overflow: hidden; transition: .2s; }
+    .part:hover { border-color: var(--orange); box-shadow: 0 14px 30px rgba(17,18,21,.08); }
+    .part .pic { aspect-ratio: 4/3; background: linear-gradient(160deg, #f4f5f7, #e3e6ea); display: flex; align-items: center; justify-content: center; position: relative; background-size: cover; background-position: center; }
+    .part .pic i { font-size: 2.8rem; color: #9aa1ad; }
+    .part .pic.has-img i { display: none; }
+    .part .tag { position: absolute; top: 10px; left: 10px; font-family: 'JetBrains Mono'; font-size: .65rem; background: var(--black); color: #fff; padding: 3px 8px; border-radius: 6px; letter-spacing: 1px; }
+    .part .body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+    .part h6 { font-weight: 700; margin-bottom: 4px; font-size: .95rem; }
+    .part .spec { font-family: 'JetBrains Mono'; font-size: .72rem; color: var(--muted); margin-bottom: 12px; }
+    .part .price { font-size: .82rem; font-weight: 700; color: var(--orange); margin-bottom: 10px; }
+    .part .add { margin-top: auto; border: 1.5px solid var(--black); background: #fff; color: var(--black); border-radius: 10px; padding: 9px; font-weight: 700; font-size: .85rem; }
+    .part .add:hover, .part .add.in { background: var(--black); color: #fff; }
+    .empty { text-align: center; padding: 40px 0; color: var(--muted); }
+
+    /* Build planner */
+    .planner { background: var(--black); color: #fff; border-radius: 26px; padding: 40px; position: relative; overflow: hidden; }
+    .planner h2, .planner h4 { color: #fff; }
+    .planner .opts { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+    .planner .opt { border: 1.5px solid #3a3d44; background: transparent; color: #fff; border-radius: 12px; padding: 12px 16px; font-weight: 700; text-align: left; }
+    .planner .opt small { display: block; color: #9aa1ad; font-weight: 500; font-size: .76rem; }
+    .planner .opt.on { border-color: var(--orange); background: rgba(255,106,19,.12); }
+    .spec-sheet { background: #1b1d22; border: 1px solid #2f3238; border-radius: 18px; padding: 22px; font-family: 'JetBrains Mono', monospace; height: 100%; display: flex; flex-direction: column; }
+    .spec-sheet .r { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px dashed #333; font-size: .82rem; }
+    .spec-sheet .r span:first-child { color: #9aa1ad; }
+    .spec-sheet .r span:last-child { color: #fff; text-align: right; }
+    @media (max-width: 575px) { .planner { padding: 22px; } }
+
+    /* Quote bar + panel */
+    .qbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 998; background: var(--black); color: #fff; padding: 12px 0; box-shadow: 0 -10px 30px rgba(0,0,0,.25); transform: translateY(100%); transition: .3s; }
+    .qbar.show { transform: none; }
+    .qbar .count { background: var(--orange); border-radius: 20px; padding: 2px 10px; font-weight: 800; margin-right: 8px; }
+    .qpanel { position: fixed; left: 50%; bottom: 76px; width: min(520px, calc(100% - 24px)); transform: translate(-50%, 20px); opacity: 0; pointer-events: none; z-index: 999; background: #fff; border-radius: 20px; box-shadow: 0 30px 80px rgba(0,0,0,.35); max-height: 70vh; display: flex; flex-direction: column; transition: .25s; }
+    .qpanel.open { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+    .qpanel .head { padding: 16px 20px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+    .qpanel .head h5 { margin: 0; }
+    .qpanel .head button { border: 0; background: none; font-size: 1.5rem; line-height: 1; }
+    .qpanel .items { padding: 8px 20px; overflow-y: auto; flex: 1; }
+    .qitem { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+    .qitem .q { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .qitem .q button { width: 28px; height: 28px; border: 1px solid #bbb; border-radius: 8px; background: #fff; line-height: 1; padding: 0; }
+    .qpanel .foot { padding: 16px 20px; border-top: 1px solid var(--line); }
+    .qpanel .form-control { border-radius: 10px; padding: 10px; }
+
+    /* Contact */
+    .c-line { display: flex; gap: 14px; margin-bottom: 14px; }
+    .c-line i { color: var(--orange); font-size: 1.2rem; }
+    .c-line a { color: var(--ink); text-decoration: none; }
+    .map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; border-radius: 20px; }
+
+    footer { background: var(--black); color: #9aa1ad; padding: 26px 0; font-size: .88rem; }
+    footer img { width: 36px; height: 36px; border-radius: 8px; }
+
+    .wa { position: fixed; right: 18px; bottom: 84px; width: 56px; height: 56px; border-radius: 50%; background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; z-index: 997; box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+    .wa:hover { color: #fff; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO NOTICE: remove after the owner approves -->
+  <div class="demo-line">Concept demo for Dinidu PC Solution · sample catalogue</div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#home"><img src="logo.png" alt="DPS logo"> Dinidu PC Solution</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#parts">Parts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#build">Build a PC</a></li>
+          <li class="nav-item"><a class="nav-link" href="#repairs">Repairs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-orange btn-sm" href="https://wa.me/94773875250" target="_blank"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <svg class="circuit" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#ff6a13" stroke-width="2">
+        <path d="M0 80 H220 L260 120 H520"/><path d="M0 200 H140 L180 160 H400 L440 200 H700"/><path d="M0 360 H300 L340 320 H600"/>
+        <path d="M1200 60 H960 L920 100 H700"/><path d="M1200 260 H1000 L960 300 H760 L720 260 H640"/><path d="M1200 430 H880 L840 390 H620"/>
+      </g>
+      <g fill="#ff6a13"><circle cx="520" cy="120" r="6"/><circle cx="700" cy="200" r="6"/><circle cx="600" cy="320" r="6"/><circle cx="700" cy="100" r="6"/><circle cx="640" cy="260" r="6"/><circle cx="620" cy="390" r="6"/></g>
+    </svg>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 reveal">
+          <div class="notice mb-3"><i class="bi bi-geo-alt-fill"></i>Avissawella Road, Kaduwela</div>
+          <h1>Parts. Builds.<br><span>Repairs.</span></h1>
+          <p class="lead mt-3" style="color:#b9bec8;max-width:520px">Your computer shop in Kaduwela. Find the part you need, plan a custom PC, or bring your laptop in for a repair.</p>
+          <form class="search-hero" onsubmit="heroSearch(event)">
+            <input id="heroQ" placeholder="Search parts: SSD, RAM, Ryzen, monitor…" aria-label="Search parts">
+            <button type="submit"><i class="bi bi-search"></i></button>
+          </form>
+          <div class="chips-hero">
+            <a href="#parts" onclick="pickCat('ssd')">SSDs</a><a href="#parts" onclick="pickCat('ram')">RAM</a><a href="#parts" onclick="pickCat('gpu')">Graphics cards</a><a href="#build">Build a gaming PC</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center reveal"><img src="logo.png" alt="Dinidu PC Solution" class="hero-logo"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SERVICES STRIP ===== -->
+  <div class="svc-strip" id="repairs">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-lg-3"><div class="s"><i class="bi bi-cpu"></i>Computer parts &amp; accessories</div></div>
+        <div class="col-6 col-lg-3"><div class="s"><i class="bi bi-pc-display"></i>Custom PC builds</div></div>
+        <div class="col-6 col-lg-3"><div class="s"><i class="bi bi-tools"></i>PC &amp; laptop repairs</div></div>
+        <div class="col-6 col-lg-3"><div class="s"><i class="bi bi-arrow-up-circle"></i>RAM &amp; SSD upgrades</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CATALOGUE ===== -->
+  <section id="parts">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4 reveal">
+        <div><div class="label">// Parts catalogue</div><h2 class="title mt-2">Find your <span class="orange">part</span></h2><p class="muted mb-0">Prices change with the market. Add parts to your quote list and we'll send today's price on WhatsApp.</p></div>
+        <div style="min-width:260px;flex:0 1 340px"><input id="catQ" class="cat-search" placeholder="Search the catalogue…" oninput="drawParts()"></div>
+      </div>
+      <div class="cat-bar mb-4 reveal" id="cats"></div>
+      <div class="row g-3" id="grid"></div>
+      <div class="empty d-none" id="empty"><i class="bi bi-search" style="font-size:2rem"></i><p class="mt-2 mb-2">No parts found. We may still have it!</p><a class="btn btn-orange" id="askMissing" href="#" target="_blank"><i class="bi bi-whatsapp me-2"></i>Ask if it's in stock</a></div>
+      <p class="muted small mt-3">Sample catalogue. Dinidu PC Solution's real stock goes here.</p>
+    </div>
+  </section>
+
+  <!-- ===== BUILD PLANNER ===== -->
+  <section id="build" class="pt-0">
+    <div class="container">
+      <div class="planner reveal">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="label">// PC build planner</div>
+            <h2 class="title mt-2 mb-4">Plan your <span class="orange">PC</span></h2>
+            <div class="small mb-2" style="color:#9aa1ad">What will you use it for?</div>
+            <div class="opts" id="use">
+              <button class="opt on" data-v="office">Office &amp; study<small>Docs, browsing, Zoom</small></button>
+              <button class="opt" data-v="gaming">Gaming<small>1080p games</small></button>
+              <button class="opt" data-v="editing">Editing &amp; design<small>Video, photo, 3D</small></button>
+            </div>
+            <div class="small mb-2" style="color:#9aa1ad">Budget</div>
+            <div class="opts" id="budget">
+              <button class="opt" data-v="low">Budget</button>
+              <button class="opt on" data-v="mid">Mid-range</button>
+              <button class="opt" data-v="high">High-end</button>
+            </div>
+            <p class="small mb-0" style="color:#9aa1ad">A starting point only. We'll fine-tune it to your budget and today's prices.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="spec-sheet">
+              <div class="d-flex justify-content-between mb-2"><b style="color:var(--orange)" id="buildName">BUILD</b><span style="color:#9aa1ad" class="small">DPS · SPEC SHEET</span></div>
+              <div id="specRows"></div>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <button class="btn btn-orange flex-fill" onclick="addBuild()"><i class="bi bi-plus-lg me-1"></i>Add build to quote</button>
+                <a id="askBuild" class="btn btn-out flex-fill" href="#" target="_blank"><i class="bi bi-whatsapp me-1"></i>Ask about this build</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="pt-0">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 reveal">
+          <div class="label">// Visit the shop</div>
+          <h2 class="title mt-2 mb-4">Find <span class="orange">DPS</span></h2>
+          <div class="c-line"><i class="bi bi-geo-alt-fill"></i><div>30/1/1, Avissawella Road,<br>Kaduwela 10640</div></div>
+          <div class="c-line"><i class="bi bi-telephone-fill"></i><a href="tel:+94773875250">077 387 5250</a></div>
+          <div class="c-line"><i class="bi bi-whatsapp"></i><a href="https://wa.me/94773875250" target="_blank">WhatsApp us</a></div>
+          <div class="c-line"><i class="bi bi-clock-fill"></i><div>Opening hours <span class="muted small">(to be confirmed)</span></div></div>
+          <a class="btn btn-steel mt-2" href="https://wa.me/94773875250?text=Hi%20DPS!%20I%20need%20a%20repair%20for%20my%20PC%20%2F%20laptop." target="_blank"><i class="bi bi-tools me-2"></i>Book a repair</a>
+        </div>
+        <div class="col-lg-7 map reveal"><iframe src="https://maps.google.com/maps?q=30%2F1%2F1%20Avissawella%20Road%20Kaduwela&z=16&output=embed" loading="lazy" title="Map to Dinidu PC Solution"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span class="d-flex align-items-center gap-2"><img src="logo.png" alt=""> <b class="text-white">Dinidu PC Solution</b></span>
+      <span>&copy; <span id="yr"></span> DPS · Kaduwela</span>
+      <span>Website by Lowamina Pigera</span>
+    </div>
+  </footer>
+
+  <!-- ===== QUOTE LIST ===== -->
+  <div class="qpanel" id="qpanel">
+    <div class="head"><h5>Your quote list</h5><button onclick="panel(false)" aria-label="Close">&times;</button></div>
+    <div class="items" id="qitems"></div>
+    <div class="foot">
+      <input id="qName" class="form-control mb-2" placeholder="Your name">
+      <button class="btn btn-orange w-100" onclick="sendQuote()"><i class="bi bi-whatsapp me-2"></i>Get today's prices on WhatsApp</button>
+      <small id="qMsg" class="d-block mt-2 orange fw-bold"></small>
+    </div>
+  </div>
+  <div class="qbar" id="qbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span><span class="count" id="qCount">0</span>items in your quote list</span>
+      <button class="btn btn-orange btn-sm" onclick="panel(true)">View &amp; send</button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/94773875250" target="_blank" class="wa" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const WHATSAPP = '94773875250';
+    const wa = t => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // ---- Sample catalogue: replace with DPS stock. price: null shows "Ask today's price" ----
+    const CATS = [
+      { id: 'all', name: 'All', icon: 'bi-grid' }, { id: 'cpu', name: 'Processors', icon: 'bi-cpu' },
+      { id: 'mb', name: 'Motherboards', icon: 'bi-motherboard' }, { id: 'ram', name: 'RAM', icon: 'bi-memory' },
+      { id: 'ssd', name: 'Storage', icon: 'bi-device-ssd' }, { id: 'gpu', name: 'Graphics', icon: 'bi-gpu-card' },
+      { id: 'psu', name: 'Power & cases', icon: 'bi-plug' }, { id: 'acc', name: 'Monitors & accessories', icon: 'bi-display' }
+    ];
+    const PRODUCTS = [
+      { id: 'cpu1', cat: 'cpu', name: 'Intel Core i3 (12th Gen)', spec: '4 cores · 8 threads', tag: 'OFFICE' },
+      { id: 'cpu2', cat: 'cpu', name: 'Intel Core i5 (12th Gen)', spec: '6 cores · 12 threads', tag: 'POPULAR' },
+      { id: 'cpu3', cat: 'cpu', name: 'AMD Ryzen 5 5600', spec: '6 cores · AM4' },
+      { id: 'cpu4', cat: 'cpu', name: 'AMD Ryzen 7 (7000 series)', spec: '8 cores · AM5', tag: 'PRO' },
+      { id: 'mb1', cat: 'mb', name: 'H610 Motherboard', spec: 'Intel 12th/13th Gen · mATX' },
+      { id: 'mb2', cat: 'mb', name: 'B550 Motherboard', spec: 'AMD AM4 · ATX' },
+      { id: 'mb3', cat: 'mb', name: 'B650 Motherboard', spec: 'AMD AM5 · DDR5' },
+      { id: 'ram1', cat: 'ram', name: '8GB DDR4 RAM', spec: '3200MHz · desktop' },
+      { id: 'ram2', cat: 'ram', name: '16GB DDR4 RAM (2×8GB)', spec: '3200MHz · dual channel', tag: 'POPULAR' },
+      { id: 'ram3', cat: 'ram', name: '32GB DDR5 RAM (2×16GB)', spec: '5600MHz' },
+      { id: 'ram4', cat: 'ram', name: '8GB Laptop RAM', spec: 'DDR4 SO-DIMM' },
+      { id: 'ssd1', cat: 'ssd', name: '256GB SATA SSD', spec: '2.5" · up to 500MB/s', tag: 'UPGRADE' },
+      { id: 'ssd2', cat: 'ssd', name: '512GB NVMe SSD', spec: 'M.2 · up to 3000MB/s', tag: 'POPULAR' },
+      { id: 'ssd3', cat: 'ssd', name: '1TB NVMe SSD', spec: 'M.2 · Gen4' },
+      { id: 'ssd4', cat: 'ssd', name: '1TB Hard Drive', spec: '3.5" · 7200rpm' },
+      { id: 'gpu1', cat: 'gpu', name: 'Entry Graphics Card', spec: '4GB · light gaming' },
+      { id: 'gpu2', cat: 'gpu', name: '1080p Gaming Graphics Card', spec: '8GB · RTX / RX class', tag: 'GAMING' },
+      { id: 'gpu3', cat: 'gpu', name: 'High-end Graphics Card', spec: '12GB+ · editing & 1440p' },
+      { id: 'psu1', cat: 'psu', name: '550W Power Supply', spec: '80+ Bronze' },
+      { id: 'psu2', cat: 'psu', name: '750W Power Supply', spec: '80+ Gold' },
+      { id: 'case1', cat: 'psu', name: 'Mid-tower Case', spec: 'ATX · 3 RGB fans' },
+      { id: 'ups1', cat: 'psu', name: 'UPS 650VA', spec: 'Backup for power cuts', tag: 'MUST' },
+      { id: 'mon1', cat: 'acc', name: '22" Monitor', spec: 'Full HD · 75Hz' },
+      { id: 'mon2', cat: 'acc', name: '24" IPS Monitor', spec: 'Full HD · 144Hz', tag: 'GAMING' },
+      { id: 'kb1', cat: 'acc', name: 'Keyboard & Mouse Combo', spec: 'USB · wired' },
+      { id: 'kb2', cat: 'acc', name: 'Gaming Keyboard', spec: 'Mechanical · RGB' },
+      { id: 'wifi1', cat: 'acc', name: 'USB Wi-Fi Adapter', spec: 'Dual band' },
+      { id: 'hs1', cat: 'acc', name: 'Headset with Mic', spec: 'For calls & gaming' }
+    ];
+    let cat = 'all', quote = {};   // quote: id -> qty
+
+    document.getElementById('cats').innerHTML = CATS.map(c =>
+      `<button class="cat${c.id === 'all' ? ' on' : ''}" data-c="${c.id}"><i class="bi ${c.icon}"></i>${c.name}<span class="n">${c.id === 'all' ? PRODUCTS.length : PRODUCTS.filter(p => p.cat === c.id).length}</span></button>`).join('');
+    document.querySelectorAll('#cats .cat').forEach(b => b.addEventListener('click', () => pickCat(b.dataset.c)));
+    function pickCat(c) {
+      cat = c; document.querySelectorAll('#cats .cat').forEach(x => x.classList.toggle('on', x.dataset.c === c)); drawParts();
+    }
+    function heroSearch(e) {
+      e.preventDefault(); document.getElementById('catQ').value = document.getElementById('heroQ').value; pickCat('all');
+      document.getElementById('parts').scrollIntoView({ behavior: 'smooth' });
+    }
+    const iconFor = c => (CATS.find(x => x.id === c) || CATS[0]).icon;
+    function drawParts() {
+      const q = document.getElementById('catQ').value.trim().toLowerCase();
+      const list = PRODUCTS.filter(p => (cat === 'all' || p.cat === cat) && (!q || (p.name + ' ' + p.spec).toLowerCase().includes(q)));
+      document.getElementById('grid').innerHTML = list.map(p => `
+        <div class="col-6 col-md-4 col-lg-3"><div class="part">
+          <div class="pic" data-img="${p.id}.jpg">${p.tag ? `<span class="tag">${p.tag}</span>` : ''}<i class="bi ${iconFor(p.cat)}"></i></div>
+          <div class="body"><h6>${p.name}</h6><div class="spec">${p.spec}</div><div class="price">Ask today's price</div>
+          <button class="add${quote[p.id] ? ' in' : ''}" data-id="${p.id}">${quote[p.id] ? '✓ In quote (' + quote[p.id] + ')' : '+ Add to quote'}</button></div>
+        </div></div>`).join('');
+      document.getElementById('empty').classList.toggle('d-none', list.length > 0);
+      document.getElementById('askMissing').href = wa(`Hi DPS! Do you have "${document.getElementById('catQ').value.trim()}" in stock? What's the price?`);
+      document.querySelectorAll('#grid .add').forEach(b => b.addEventListener('click', () => { add(b.dataset.id); }));
+      loadImgs(document.getElementById('grid'));
+    }
+
+    // ---- Quote list ----
+    function add(id, n = 1) { quote[id] = (quote[id] || 0) + n; refresh(); }
+    function change(id, d) { quote[id] += d; if (quote[id] <= 0) delete quote[id]; refresh(); }
+    function refresh() {
+      const ids = Object.keys(quote), count = ids.reduce((a, id) => a + quote[id], 0);
+      document.getElementById('qCount').textContent = count;
+      document.getElementById('qbar').classList.toggle('show', count > 0);
+      if (!count) panel(false);
+      document.getElementById('qitems').innerHTML = ids.map(id => {
+        const p = PRODUCTS.find(x => x.id === id);
+        return `<div class="qitem"><div><b>${p.name}</b><br><small class="muted">${p.spec}</small></div><div class="q"><button onclick="change('${id}',-1)">−</button><span>${quote[id]}</span><button onclick="change('${id}',1)">+</button></div></div>`;
+      }).join('');
+      drawParts();
+    }
+    function panel(open) { document.getElementById('qpanel').classList.toggle('open', open); }
+    function sendQuote() {
+      const name = document.getElementById('qName').value.trim(), msg = document.getElementById('qMsg');
+      if (!name) { msg.textContent = 'Please add your name.'; return; }
+      msg.textContent = '';
+      const lines = Object.keys(quote).map(id => `• ${PRODUCTS.find(x => x.id === id).name} × ${quote[id]}`).join('\n');
+      window.open(wa(`Hi DPS! I'd like today's prices for:\n${lines}\n\nName: ${name}`), '_blank');
+    }
+
+    // ---- PC build planner ----
+    const BUILDS = {
+      office:  { low: ['cpu1', 'mb1', 'ram1', 'ssd1', 'psu1', 'case1', 'mon1', 'kb1'], mid: ['cpu2', 'mb1', 'ram2', 'ssd2', 'psu1', 'case1', 'mon1', 'kb1', 'ups1'], high: ['cpu2', 'mb1', 'ram2', 'ssd3', 'psu1', 'case1', 'mon2', 'kb1', 'ups1'] },
+      gaming:  { low: ['cpu3', 'mb2', 'ram2', 'ssd2', 'gpu1', 'psu1', 'case1'], mid: ['cpu3', 'mb2', 'ram2', 'ssd3', 'gpu2', 'psu2', 'case1', 'mon2'], high: ['cpu4', 'mb3', 'ram3', 'ssd3', 'gpu3', 'psu2', 'case1', 'mon2', 'kb2'] },
+      editing: { low: ['cpu2', 'mb1', 'ram2', 'ssd2', 'gpu1', 'psu1', 'case1'], mid: ['cpu3', 'mb2', 'ram2', 'ssd3', 'gpu2', 'psu2', 'case1', 'ups1'], high: ['cpu4', 'mb3', 'ram3', 'ssd3', 'gpu3', 'psu2', 'case1', 'mon2', 'ups1'] }
+    };
+    const ROLE = { cpu: 'CPU', mb: 'Board', ram: 'RAM', ssd: 'Storage', gpu: 'GPU', psu: 'Power/Case', acc: 'Extras' };
+    let use = 'office', budget = 'mid';
+    ['use', 'budget'].forEach(g => document.querySelectorAll('#' + g + ' .opt').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('#' + g + ' .opt').forEach(x => x.classList.remove('on')); b.classList.add('on');
+      if (g === 'use') use = b.dataset.v; else budget = b.dataset.v; drawBuild();
+    })));
+    function drawBuild() {
+      const ids = BUILDS[use][budget], useName = { office: 'Office & study', gaming: 'Gaming', editing: 'Editing & design' }[use], bName = { low: 'Budget', mid: 'Mid-range', high: 'High-end' }[budget];
+      document.getElementById('buildName').textContent = `${useName} · ${bName}`.toUpperCase();
+      document.getElementById('specRows').innerHTML = ids.map(id => { const p = PRODUCTS.find(x => x.id === id); return `<div class="r"><span>${ROLE[p.cat]}</span><span>${p.name}</span></div>`; }).join('');
+      document.getElementById('askBuild').href = wa(`Hi DPS! I'm planning a ${bName.toLowerCase()} ${useName.toLowerCase()} PC. Can you give me a price for:\n${ids.map(id => '• ' + PRODUCTS.find(x => x.id === id).name).join('\n')}`);
+    }
+    function addBuild() { BUILDS[use][budget].forEach(id => { quote[id] = (quote[id] || 0) + 1; }); refresh(); panel(true); }
+    drawBuild();
+
+    // Photo slots: put photos in the "img" folder (see img/PHOTOS.txt) and they appear
+    function loadImgs(root) {
+      root.querySelectorAll('[data-img]').forEach(el => {
+        const src = 'img/' + el.dataset.img, test = new Image();
+        test.onload = () => { el.style.backgroundImage = `url("${src}")`; el.classList.add('has-img'); };
+        test.src = src;
+      });
+    }
+    drawParts();
+
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+    }), { threshold: .1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
